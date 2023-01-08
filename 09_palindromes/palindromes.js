@@ -1,3 +1,4 @@
+/*
 const palindromes = function (string) {
     //Create new empty string to host the reversed sting
     let newString = '';
@@ -21,7 +22,12 @@ const palindromes = function (string) {
     return newString.toLowerCase() === oldString.toLowerCase();
 
 };
+*/
 
+const palindromes = function(string) {
+    const processedString = string.toLowerCase().replace(/[^a-z]/g,'');
+    return (processedString.split('').reverse().join('') == processedString);
+};
 
 // Do not edit below this line
 module.exports = palindromes;
